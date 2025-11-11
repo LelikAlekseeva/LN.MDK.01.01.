@@ -26,7 +26,10 @@ namespace ArrayMaxFinder
                         max = array[i];///запоминаем индекс нового мак эл-та
                     }
                 }
-
+                ///вывод
+                Console.WriteLine($"Максимальный элемент: {max}");
+                Console.WriteLine($"Индекс максимального элемента: {maxIndex}");
+                Console.WriteLine($"Позиция в массиве: {maxIndex + 1}");
             }
         }
     }
