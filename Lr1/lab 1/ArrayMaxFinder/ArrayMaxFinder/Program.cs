@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ArrayMaxFinder
+namespace ArrayMaxFinder ///вариант 3
 {
     internal class Program
     {
@@ -16,20 +16,22 @@ namespace ArrayMaxFinder
                 Console.Write($"Элемент {i + 1}: ");
                 array[i] = int.Parse(Console.ReadLine());///заполняется массив чиселками пользователя
 
-                int max = array[1];///предположи что 1ый эл-т максимальный
+                int max = array[0];///предположи что 1ый эл-т максимальный
                 int maxIndex = 0;///запомнили индекс первого эл-та
 
                 for (int i = 1; i< n; i++)///цикл начинаем со второго эл-та
                 {
                     if (array[i] > max)///Проверим если текущий элемент больше нашего текущего максимума
                     {
-                        max = array[i];///запоминаем индекс нового мак эл-та
+                        max = array[i];
+                        maxIndex = i;///запоминаем индекс нового мак эл-та
                     }
                 }
                 ///вывод
                 Console.WriteLine($"Максимальный элемент: {max}");
                 Console.WriteLine($"Индекс максимального элемента: {maxIndex}");
                 Console.WriteLine($"Позиция в массиве: {maxIndex + 1}");
+                Console.ReadKey();
             }
         }
     }
