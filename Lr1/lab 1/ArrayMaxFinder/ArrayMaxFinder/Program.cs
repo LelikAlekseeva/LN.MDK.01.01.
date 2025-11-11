@@ -15,16 +15,16 @@ namespace ArrayMaxFinder ///вариант 3
             {
                 Console.Write($"Элемент {i + 1}: ");
                 array[i] = int.Parse(Console.ReadLine());///заполняется массив чиселками пользователя
-
+            }
                 int max = array[0];///предположи что 1ый эл-т максимальный
                 int maxIndex = 0;///запомнили индекс первого эл-та
 
-                for (int i = 1; i< n; i++)///цикл начинаем со второго эл-та
+                for (int index = 1; index< n; index++)///цикл начинаем со второго эл-та
                 {
-                    if (array[i] > max)///Проверим если текущий элемент больше нашего текущего максимума
+                    if (array[index] > max)///Проверим если текущий элемент больше нашего текущего максимума
                     {
-                        max = array[i];
-                        maxIndex = i;///запоминаем индекс нового мак эл-та
+                        max = array[index];
+                        maxIndex = index;///запоминаем индекс нового мак эл-та
                     }
                 }
                 ///вывод
@@ -32,7 +32,6 @@ namespace ArrayMaxFinder ///вариант 3
                 Console.WriteLine($"Индекс максимального элемента: {maxIndex}");
                 Console.WriteLine($"Позиция в массиве: {maxIndex + 1}");
                 Console.ReadKey();
-            }
         }
     }
 }
