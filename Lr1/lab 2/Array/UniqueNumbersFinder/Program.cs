@@ -13,7 +13,26 @@ namespace UniqueNumbersFinder
             for (int i = 0; i < 1500; i++)
             {
                 int randomNumber = random.Next(1, 201); // Генерируем число от 1 до 200
-                allNumbers.Add(randomNumber); // Добавляем число в список
+                allNumbers.Add(randomNumber);
+
+                Dictionary<int, int> numberCounts = new Dictionary<int, int>();///Создаем словарь для подсчета количества каждого числа
+
+                foreach (int number in allNumbers)///Подсчитываем сколько раз встречается каждое число
+                {
+                    ///Если число уже есть в словаре, увеличиваем счетчик
+                    if (numberCounts.ContainsKey(number))
+                    {
+                        numberCounts[number]++; // Увеличиваем счетчик на 1
+                    }
+                    else
+                    {
+                        /// Если числа нет в словаре, добавляем его со счетчиком 1
+                        numberCounts[number] = 1;
+                    }
+                }
+                List<int> uniqueNumbers = new List<int>();///Создаем список для чисел, которые встречаются только один раз
+                
             }
+        }
     }
 }
