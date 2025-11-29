@@ -24,6 +24,21 @@ namespace ManyClasses
         {
             products_.Add(product, quantity);
         }
-
+        public void GetProductQuantity()
+        {
+           foreach (Products product in products_.Keys)
+           {
+                Console.WriteLine(product.GetName() + " - " + products_[product]);
+           }
+        }
+        public void CalculateMoney()
+        {
+            double sum = 0;
+            foreach (Products product in products_.Keys)
+            {
+                sum += product.GetPrice() * products_[product];
+            }
+            Console.WriteLine(sum);
+        }
     }
 }

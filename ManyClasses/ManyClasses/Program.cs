@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace ManyClasses
@@ -19,6 +20,22 @@ namespace ManyClasses
             storage.SetProductQuantity(mersedes, 2);
             storage.SetProductQuantity(uaz, 5);
 
+            storage.GetProductQuantity();
+            storage.CalculateMoney();
+
+            Report report = new Report();
+            ReportRaw row1 = new ReportRaw();
+            row1.Products = "блаблаблаблала";
+            row1.Quantity = 100;
+            row1.Price = 5000;
+            ReportRaw row2 = new ReportRaw();
+            row2.Products = "укукккуукуккукукуку";
+            row2.Quantity = 100;
+            row2.Price = 100000;
+
+            report.AddRecord(row1);
+            report.AddRecord(row2);
+            report.ToString();
         }
     }
 }
