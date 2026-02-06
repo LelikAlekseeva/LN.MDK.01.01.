@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
-[assembly: AssemblyTitle("FoodStorApp")]
+[assembly: AssemblyTitle("FoodProducts")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("FoodStorApp")]
+[assembly: AssemblyProduct("FoodProducts")]
 [assembly: AssemblyCopyright("Copyright ©  2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("444640de-7adc-46c9-8475-d4687e17b97a")]
+[assembly: Guid("c551db7f-f597-4a9a-8c0d-6c13b6dfdbb9")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

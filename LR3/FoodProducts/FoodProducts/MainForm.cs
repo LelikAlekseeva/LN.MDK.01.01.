@@ -8,11 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace FoodStorApp
+namespace FoodProducts
 {
     public partial class MainForm : Form
     {
-        private Dictionary<string, List<Product>> productGroups = new Dictionary<string, List<Product>>();
         public MainForm()
         {
             InitializeComponent();

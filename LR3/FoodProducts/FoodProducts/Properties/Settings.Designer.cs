@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FoodStorApp.Properties
+namespace FoodProducts.Properties
 {
 
 
