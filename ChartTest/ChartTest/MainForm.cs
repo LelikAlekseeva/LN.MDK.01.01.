@@ -15,15 +15,15 @@ namespace ChartTest
                 Title = "Продажи",
                 Values = new ChartValues<int> { 10, 15, 12, 18, 25, 22 },
 
-                Stroke = new SolidColorBrush(Colors.Blue),
+                Stroke = new SolidColorBrush(Colors.Teal),
                 StrokeThickness = 2,
 
                 PointGeometry = DefaultGeometries.Circle,
-                PointGeometrySize = 7,
+                PointGeometrySize = 8,
 
                 Fill = new LinearGradientBrush(
-                    System.Windows.Media.Color.FromArgb(90, 33, 150, 243),
-                    System.Windows.Media.Color.FromArgb(0, 33, 150, 243),
+                    System.Windows.Media.Color.FromArgb(90, 0, 150, 136),
+                    System.Windows.Media.Color.FromArgb(0, 0, 150, 136),
                     90)
             };
 
@@ -32,13 +32,14 @@ namespace ChartTest
             /// Ось Y
             cartesian.AxisY.Add(new Axis
             {
-                Foreground = System.Windows.Media.Brushes.Black,
+                Foreground = new SolidColorBrush(Color.FromArgb(200, 69, 90, 100)), // Темно-серый с оттенком синего
                 LabelFormatter = value => value.ToString("N0"),
 
                 Separator = new Separator
                 {
-                    Stroke = new SolidColorBrush(Color.FromArgb(40, 0, 0, 0)),
-                    StrokeThickness = 1
+                    Stroke = new SolidColorBrush(Color.FromArgb(30, 100, 100, 180)),// Голубоватый сепаратор
+                    StrokeThickness = 0.8,
+                    StrokeDashArray = new DoubleCollection { 4 } // Пунктирная линия
                 },
 
                 MaxValue = 30,
