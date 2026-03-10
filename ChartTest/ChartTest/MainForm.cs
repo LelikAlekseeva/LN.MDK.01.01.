@@ -1,5 +1,11 @@
 ﻿using LiveCharts;
 using LiveCharts.Wpf;
+using SalesLibrary;
+using SalesLibrary.Analysis;
+using SalesLibrary.Presenters;
+using SalesLibrary.Views;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Windows.Media;
 
@@ -7,64 +13,19 @@ namespace ChartTest
 {
     public partial class MainForm : Form
     {
-
+        private SalesPresenter presenter_;
         void FillCartesianChart()
         {
-            LineSeries series = new LineSeries
+            ItemsList.DataSource = presenter_.GetAllItems();
+            ItemsList.DisplayMember = "Name";
+            if (ItemsList.Items.Count > 0)
             {
-                Title = "Продажи",
-                Values = new ChartValues<int> { 10, 15, 12, 18, 25, 22 },
-
-                Stroke = new SolidColorBrush(Colors.Teal),
-                StrokeThickness = 2,
-
-                PointGeometry = DefaultGeometries.Circle,
-                PointGeometrySize = 8,
-
-                Fill = new LinearGradientBrush(
-                    System.Windows.Media.Color.FromArgb(90, 0, 150, 136),
-                    System.Windows.Media.Color.FromArgb(0, 0, 150, 136),
-                    90)
-            };
-
-            cartesian.Series = new SeriesCollection { series, /*series_2, series_3*/ };
-
-            /// Ось Y
-            cartesian.AxisY.Add(new Axis
-            {
-                Foreground = new SolidColorBrush(Color.FromArgb(200, 69, 90, 100)), // Темно-серый с оттенком синего
-                LabelFormatter = value => value.ToString("N0"),
-
-                Separator = new Separator
-                {
-                    Stroke = new SolidColorBrush(Color.FromArgb(30, 100, 100, 180)),// Голубоватый сепаратор
-                    StrokeThickness = 0.8,
-                    StrokeDashArray = new DoubleCollection { 4 } // Пунктирная линия
-                },
-
-                MaxValue = 30,
-                MinValue = 1
-            }              
-            );
-
-
-            /// Ось X
-            cartesian.AxisX.Add(new Axis
-            {
-                Foreground = System.Windows.Media.Brushes.Black,
-                Labels = new[] { "Янв", "Фев", "Мар", "Апр", "Май", "Июн" },
-
-                Separator = new Separator
-                {
-                    IsEnabled = false,
-                },
+                presenter_.ShowSalesByItem(((Item)ItemsList.Items[0]).Name);
             }
-            );
         }
 
         void FillAngular()
         {
-            angular.Value = 65;
             angular.FromValue = 0;
             angular.ToValue = 100;
 
@@ -74,7 +35,6 @@ namespace ChartTest
 
         void FillSolid()
         {
-            solid.Value = 40;
             solid.From = 0;
             solid.To = 100;
             solid.LabelFormatter = value => value + "%";
@@ -83,11 +43,49 @@ namespace ChartTest
         {
             InitializeComponent();
 
+            presenter_ = new SalesPresenter(new List<ISalesView> { cartesian });
+
             FillCartesianChart();
 
             FillAngular();
 
             FillSolid();
+
+            FillPieChart();
+        }
+
+        private void ItemsList_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            Item selectedItem = ((Item)(ItemsList.SelectedItem));
+            if(selectedItem == null)
+            {
+                return;
+            }
+
+            presenter_.ShowSalesByItem(selectedItem.Name);
+            double percent = Math.Round(
+                presenter_.GetProfitPercentByItem(selectedItem), 2);
+
+            angular.Value = percent;
+            solid.Value = percent;
+        }
+
+        private void cartesian_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+
+        }
+
+        private void pieChart_ChildChanged(object sender, System.Windows.Forms.Integration.ChildChangedEventArgs e)
+        {
+
+        }
+        void FillPieChart()
+        {
+            pieChart.Series = new SeriesCollection
+            {
+               
+
+            };
         }
     }
 }
