@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные с этой сборкой.
-[assembly: AssemblyTitle("ArrayMaxFinder")]
+[assembly: AssemblyTitle("LAB1")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ArrayMaxFinder")]
+[assembly: AssemblyProduct("LAB1")]
 [assembly: AssemblyCopyright("Copyright ©  2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID представляет идентификатор typelib, если этот проект доступен из модели COM
-[assembly: Guid("adad3f55-b011-43a0-b677-58167ac96437")]
+[assembly: Guid("7fcf3ba2-ff54-4034-b687-b93ecb5f5aa8")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //
