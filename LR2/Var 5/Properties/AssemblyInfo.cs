@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанные с этой сборкой.
-[assembly: AssemblyTitle("LR2 new")]
+[assembly: AssemblyTitle("VARIANT 5")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LR2 new")]
+[assembly: AssemblyProduct("VARIANT 5")]
 [assembly: AssemblyCopyright("Copyright ©  2025")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID представляет идентификатор typelib, если этот проект доступен из модели COM
-[assembly: Guid("0fdaa2f5-4af6-4427-aa2d-350941542d69")]
+[assembly: Guid("1d0bc3d3-debe-48a6-be56-9607b9ac6fe1")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //
