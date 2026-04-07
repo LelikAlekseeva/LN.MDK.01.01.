@@ -20,6 +20,11 @@ namespace Database
             loader_ = loader;
         }
 
+        internal void SetUser(User selectedUser)
+        {
+            throw new NotImplementedException();
+        }
+
         private void AddButton_Click(object sender, EventArgs e)
         {
             User user = new User
