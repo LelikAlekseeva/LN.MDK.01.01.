@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FoodProducts.Properties
+namespace LR_3.Properties
 {
 
 
