@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Общие сведения об этой сборке предоставляются следующим набором
 // набора атрибутов. Измените значения этих атрибутов для изменения сведений,
 // связанных со сборкой.
-[assembly: AssemblyTitle("LR 3")]
+[assembly: AssemblyTitle("MovieRental")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LR 3")]
+[assembly: AssemblyProduct("MovieRental")]
 [assembly: AssemblyCopyright("Copyright ©  2026")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Следующий GUID служит для идентификации библиотеки типов, если этот проект будет видимым для COM
-[assembly: Guid("3e514894-d3ef-4729-b53d-3fa7917fdda6")]
+[assembly: Guid("5e2b022f-9c51-4b65-9306-c9cbd43c2214")]
 
 // Сведения о версии сборки состоят из указанных ниже четырех значений:
 //

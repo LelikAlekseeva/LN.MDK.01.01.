@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LR_3.Properties
+namespace MovieRental.Properties
 {
 
 
